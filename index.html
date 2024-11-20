@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Job</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>NEW Create a Job</h1>
+    <form id="jobForm" method="POST">
+        <div class="form-grid">
+            <div class="form-card">
+                <h3>Client details</h3>
+                <input type="text" name="firstName" placeholder="First name" required>
+                <input type="text" name="lastName" placeholder="Last name" required>
+                <input type="tel" name="phone" placeholder="(XXX) XXX-XXXX" required>
+                <input type="email" name="email" placeholder="email">
+            </div>
+
+            <div class="form-card">
+                <h3>Job type</h3>
+                <label for="job-type">Job Type:</label>
+                <input type="text" id="job-type" name="jobType" placeholder="Enter job type">
+
+                <label for="job-location">Location:</label>
+                <select id="job-location" name="jobSource">
+                    <option value="GL Pinellas">GL Pinellas</option>
+                    <option value="GL Tampa">GL Tampa</option>
+                    <option value="GL Orlando">GL Orlando</option>
+                </select>
+
+                <label for="job-description">Job Description (optional):</label>
+                <textarea id="job-description" name="jobDescription" placeholder="Add a description"></textarea>
+            </div>
+
+            <div class="form-card">
+                <h3>Service location</h3>
+                <input type="text" name="address" placeholder="Address" required>
+                <input type="text" name="city" placeholder="City" required>
+                <input type="text" name="state" placeholder="State">
+                <input type="text" name="zip" placeholder="ZIP Code" required>
+            </div>
+            <div class="form-card">
+                <h3>Scheduled</h3>
+                <label for="scheduled-date">Date:</label>
+                <input type="date" id="scheduled-date" name="startDate">
+
+                <label for="scheduled-start-time">Start Time:</label>
+                <input type="time" id="scheduled-start-time" name="startTime">
+
+                <label for="scheduled-end-time">End Time:</label>
+                <input type="time" id="scheduled-end-time" name="endTime">
+            </div>
+        </div>
+        <div class="button-group">
+            <button type="submit" class="primary-btn">Create job</button>
+            <button type="button" class="secondary-btn">Save info</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
